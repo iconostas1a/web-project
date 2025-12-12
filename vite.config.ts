@@ -7,5 +7,5 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
-  base: process.env.NODE_ENV === 'production' ? '/movie-quizzer-react/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/web-project/' : '/',
 })

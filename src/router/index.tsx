@@ -8,6 +8,8 @@ import LeaderboardView from '../views/LeaderboardView'
 import { ProtectedRoute } from './ProtectedRoute'
 import { GuestRoute } from './GuestRoute'
 
+const basename = import.meta.env.PROD ? '/web-project' : '/'
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -61,5 +63,7 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     )
   }
-])
+], {
+  basename
+})
 
