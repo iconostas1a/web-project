@@ -8,12 +8,14 @@ import LeaderboardView from '../views/LeaderboardView'
 import { ProtectedRoute } from './ProtectedRoute'
 import { GuestRoute } from './GuestRoute'
 
-const basename = import.meta.env.PROD ? '/web-project' : '/'
+const basename = import.meta.env.BASE_URL === '/web-project/' ? '/web-project' : '/'
+
+console.log('Router basename:', basename, 'BASE_URL:', import.meta.env.BASE_URL)
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/home" replace />
+    element: <Navigate to="/login" replace />
   },
   {
     path: '/login',

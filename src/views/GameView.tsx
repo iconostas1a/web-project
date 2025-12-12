@@ -59,7 +59,7 @@ const GameView: React.FC = () => {
     if (!url) return ''
     if (url.startsWith('http')) return url
     const cleanUrl = url.startsWith('/') ? url.slice(1) : url
-    const basePath = import.meta.env.PROD ? '/web-project' : ''
+    const basePath = import.meta.env.BASE_URL === '/web-project/' ? '/web-project' : ''
     return `${basePath}/media/${cleanUrl}`
   }
 
