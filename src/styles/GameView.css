@@ -1,0 +1,66 @@
+.game-container {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 24px;
+  background: var(--timer-bg-normal);
+  border-radius: 8px;
+  color: var(--timer-color-normal);
+  transition: all 0.3s ease;
+}
+
+.timer-warning {
+  background: var(--timer-bg-warning);
+  color: var(--timer-color-warning);
+}
+
+.timer-danger {
+  background: var(--timer-bg-danger);
+  color: var(--timer-color-danger);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.btn-option {
+  padding: 16px;
+  background: var(--bg-table);
+  border: 2px solid var(--border-color);
+  text-align: left;
+  font-size: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: var(--text-primary);
+}
+
+.btn-option:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-option:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-option:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-option-selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
