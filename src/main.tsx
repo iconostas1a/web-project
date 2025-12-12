@@ -15,8 +15,13 @@ try {
   console.error('Failed to initialize app:', error)
 }
 
-createRoot(rootElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+try {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  )
+} catch (error) {
+  console.error('Failed to render app:', error)
+  rootElement.innerHTML = '<div style="padding: 20px; text-align: center;"><h1>ошибка загрузки</h1><p></p></div>'
+}

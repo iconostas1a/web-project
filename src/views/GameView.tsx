@@ -59,7 +59,8 @@ const GameView: React.FC = () => {
     if (!url) return ''
     if (url.startsWith('http')) return url
     const cleanUrl = url.startsWith('/') ? url.slice(1) : url
-    return `/media/${cleanUrl}`
+    const basePath = import.meta.env.PROD ? '/web-project' : ''
+    return `${basePath}/media/${cleanUrl}`
   }
 
   const startTimer = () => {
