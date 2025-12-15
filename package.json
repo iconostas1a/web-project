@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://iconostas1a.github.io/web-project/",
   "scripts": {
     "dev": "vite",
     "build": "NODE_ENV=production tsc && vite build",
